@@ -9,6 +9,7 @@ class Halaman extends CI_Controller {
 		$this->load->view('panel/header');
 		$this->load->view('panel/nav_top');
 		$this->load->view('panel/sidebar');
+		$this->load->view('blank');
 		$this->load->view('panel/footer');
 	}
 }
