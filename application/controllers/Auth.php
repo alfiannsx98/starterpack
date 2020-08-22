@@ -15,9 +15,9 @@ class Auth extends CI_Controller
 
 		if ($this->form_validation->run() == false) { // run itu method,dan method harus ada kurung buka dan kurung tutup.
 			$data['title'] = 'Login';
-			$this->load->view('login_element/login_header', $data);
+			$this->load->view('templates/login_header', $data);
 			$this->load->view('auth/login');
-			$this->load->view('login_element/login_footer');
+			$this->load->view('templates/login_footer');
 		} else {
 			// ketika valiasi sukses
 			$this->_login();
@@ -78,9 +78,9 @@ Wrong password!
 		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
 		if ($this->form_validation->run()  == false) {
 			$data['title'] = 'Registration';
-			$this->load->view('login_element/login_header', $data);
+			$this->load->view('templates/login_header', $data);
 			$this->load->view('auth/registration');
-			$this->load->view('login_element/login_footer');
+			$this->load->view('templates/login_footer');
 		} else {
 			$data = [
 				'nama' => htmlspecialchars($this->input->post('name', true)),
