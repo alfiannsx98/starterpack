@@ -86,7 +86,7 @@ class Auth extends CI_Controller
 				'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
 				'role_id' => 2, // yan melakukan registrasi pasti member
 				'is_active' => 1, //sementara otomatis aktif,nanti akan dinonaktifkan saa sudah belajar user activation
-				'date_created'  => time()
+				'date_created'  => date('Y-m-d', time()) // Mengubah hasil time kedalam date, menyesuaikan dengan database
 			];
 
 			$this->db->insert('user', $data);
