@@ -47,20 +47,17 @@ class Auth extends CI_Controller
 						redirect('user');
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-Wrong password!
-</div>');
+						Wrong password! </div>');
 					redirect('auth');
 				}
 			} else {
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-  This email has not been activated!
-</div>');
+				This email has not been activated! </div>');
 				redirect('auth');
 			}
 		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-  Email is not registered!
-</div>');
+					Email is not registered! </div>');
 			redirect('auth');
 		}
 	}
@@ -94,8 +91,7 @@ Wrong password!
 
 			$this->db->insert('user', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-  Congratulation,your account has been created. Please Login!
-</div>');
+									Congratulation,your account has been created. Please Login! </div>');
 			redirect('auth');
 		}
 	}
@@ -104,9 +100,7 @@ Wrong password!
 		$this->session->unset_userdata('email');
 		$this->session->unset_userdata('role_id');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-  You have been log out!
-</div>');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> You have been log out! </div>');
 		redirect('auth');
 	}
 }
