@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2020 at 03:21 PM
+-- Generation Time: Nov 20, 2020 at 04:24 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.19
 
@@ -172,7 +172,9 @@ CREATE TABLE `token_user` (
 INSERT INTO `token_user` (`id_token`, `email`, `token`, `date_created`) VALUES
 (19, 'khafid@polije.ac.id', '1K/3t4mzIrX5qc36SjVVwAMq6UyBryLEd+LPO4q2j4s=', 1604324755),
 (20, 'bagoesihsant12@gmail.coma', 'ZP4Stdry7F/nDd0B164DpPu/mj/d4cPeJzzNxWn6oUg=', 1604324900),
-(21, 'bagoesihsant@gmail.comas', 'E7ha+NWbkxhPsGp+/GHbpLFDcMysFvbM1lEj33vzLNc=', 1604325083);
+(21, 'bagoesihsant@gmail.comas', 'E7ha+NWbkxhPsGp+/GHbpLFDcMysFvbM1lEj33vzLNc=', 1604325083),
+(22, 'alfianrochmatul77@gmail.com', 'BA8HB9yFfC36wccJ1Xgsr6QazmggOQOnk4Gk7lwUOOk=', 1605885479),
+(23, 'alfianrochmatul77@gmail.com', 'qK3mZj33cai2dbZks8Chcc4wr4G4liTw/66ALFa7trQ=', 1605885780);
 
 -- --------------------------------------------------------
 
@@ -204,9 +206,10 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `nama`, `alamat`, `tanggal_lahir`, `email`, `username`, `notelp`, `profile_image`, `password`, `about`, `role_id`, `is_active`, `date_created`, `update_at`) VALUES
 ('ID-U11302', 'Alfian Rochmatul Irman', 'Kediri, Kec.Ngadiluwih', '1999-01-07', 'admin@admin.com', 'alfiannsx98', '081252223123', 'IMG-20190926-WA00371.jpg', '$2y$10$rA4uod33NMm97udn9WHda.ycsAZeqDE3sOCoLpPRP/ZJdoGSXjyYG', 'Wani Tok! yotoasddsa', 1, 1, 1583394165, 1586009053),
 ('USR2140120511118', 'Taufik Ikhsan', 'Kec. Sidoarjo, Kab. Sidoarjo', '1998-10-12', 'bagoesihsant@gmail.com', 'taufiq99', '0812523123122', 'default.jpg', '$2y$10$5EkPTWEFYT.CEm4YGhJeAOtwkuIf7vNy9jHMIoQbxAOrTm4oiXpim', 'engko ae', 2, 0, 1604238678, 0),
-('USR3150120151124', 'cobabanget', 'jalan_$_/_sI', '2020-05-01', 'alfianrochmatul77@gmail.com', 'testing101', '+628231230921', 'default.jpg', '', '&lt;h1&gt;BANZAI&lt;/h1&gt;', 1, 1, 1604240124, 0),
+('USR3150120151124', 'cobabanget', 'jalan_$_/_sI', '2020-05-01', 'alfianrochmatul77a@gmail.com', 'testing101', '+628231230921', 'default.jpg', '', '&lt;h1&gt;BANZAI&lt;/h1&gt;', 1, 1, 1604240124, 0),
 ('USR4140220481120', 'test112', 'asddddddsadsad', '2020-11-02', 'bagoesihsant12@gmail.coma', 'suryaadhy235aa', '123123213', 'default.jpg', '', 'sdaasd', 1, 0, 1604324900, 0),
-('USR5140220511123', 'asdsda', 'asdasddai8yoiuj', '2020-11-17', 'bagoesihsant@gmail.comas', 'suryaadhy235aa9', '1221312321', 'default.jpg', '', 'adsojjoijio', 1, 0, 1604325083, 0);
+('USR5140220511123', 'asdsda', 'asdasddai8yoiuj', '2020-11-17', 'bagoesihsant@gmail.comas', 'suryaadhy235aa9', '1221312321', 'default.jpg', '', 'adsojjoijio', 1, 0, 1604325083, 0),
+('USR6162020231100', 'ALFIAN ROCHMATUL IRMAN', 'asdsadsadasd', '2020-11-19', 'alfianrochmatul77@gmail.com', '-', '081252223123', 'default.jpg', '$2y$10$E/JLQH33OqQWflhVpMf/zOkBXFpUHNv/xcIbqE00fI4K9FygIyhoi', '1231231', 1, 1, 1605885780, 0);
 
 -- --------------------------------------------------------
 
@@ -227,9 +230,7 @@ CREATE TABLE `user_menu` (
 INSERT INTO `user_menu` (`id_menu`, `menu`, `icon`) VALUES
 (1, 'admin', 'fas fa-tachometer-alt'),
 (2, 'user', 'fas fa-users'),
-(3, 'menu', 'fas fa-bars'),
-(16, 'C_gis', 'fas fa-map-marked-alt'),
-(17, 'C_user', 'fas fa-table');
+(3, 'menu', 'fas fa-bars');
 
 -- --------------------------------------------------------
 
@@ -249,7 +250,7 @@ CREATE TABLE `user_role` (
 INSERT INTO `user_role` (`id_role`, `role`) VALUES
 (1, 'admin'),
 (2, 'operator'),
-(3, 'kurir');
+(3, 'user biasa');
 
 --
 -- Indexes for dumped tables
@@ -335,7 +336,7 @@ ALTER TABLE `submenu_user`
 -- AUTO_INCREMENT for table `token_user`
 --
 ALTER TABLE `token_user`
-  MODIFY `id_token` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_token` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
